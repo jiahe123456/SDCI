@@ -1,0 +1,7 @@
+python3 -m pip install Pillow
+python3 -m pip install numpy
+python3 -m pip install rasterio
+python3 -m pip install geopandas
+python3 -m pip install earthpy
+python3 -m pip install rtree
+python3 -m pip install requests
