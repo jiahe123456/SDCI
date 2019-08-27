@@ -27,10 +27,9 @@ array_stack, meta_data = es.stack(all_landsat_post_bands, nodata=-9999)
 
 NDVI = es.normalized_diff(array_stack[4], array_stack[3])
 
-fig, ax = plt.subplots(figsize=(12,12))
+fig, ax = plt.subplots(figsize=(20, 20))
 
-#ep.plot_rgb(array_stack, rgb=(5, 4, 3), ax=ax, title="Landsat 8 RGB Image")
-
-#ep.plot_bands(NDVI, scale=False, cmap="RdYlGn")
+ep.plot_rgb(array_stack, rgb=(5, 4, 3), ax=ax, title="Landsat 8 RGB Image")
+ep.plot_bands(NDVI, scale=False, cmap="RdYlGn")
 ep.plot_bands(array_stack, title=titles, cols=4)
 plt.show()
