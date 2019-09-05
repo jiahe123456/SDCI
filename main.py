@@ -17,8 +17,10 @@ import earthpy.plot as ep
 mpl.rcParams['figure.figsize'] = (10, 10)
 mpl.rcParams['axes.titlesize'] = 20
 
+#all_landsat_post_bands = glob(
+#	"coldspringsfire/landsat_collect/LC080340322016072301T1-SC20180214145802/crop/*band*.tif")
 all_landsat_post_bands = glob(
-	"coldspringsfire/landsat_collect/LC080340322016072301T1-SC20180214145802/crop/*band*.tif")
+	"LC080090582019081801RT-SC20190823150055/*band*.tif")
 all_landsat_post_bands.sort()
 
 titles = ["Ultra Blue", "Blue", "Green", "Red", "NIR", "SWIR 1", "SWIR 2"]
@@ -29,7 +31,7 @@ NDVI = es.normalized_diff(array_stack[4], array_stack[3])
 
 fig, ax = plt.subplots(figsize=(20, 20))
 
-ep.plot_rgb(array_stack, rgb=(5, 4, 3), ax=ax, title="Landsat 8 RGB Image")
+ep.plot_rgb(array_stack, rgb=(3, 2, 1), ax=ax, title="Landsat 8 RGB Image")
 ep.plot_bands(NDVI, scale=False, cmap="RdYlGn")
 ep.plot_bands(array_stack, title=titles, cols=4)
 plt.show()
