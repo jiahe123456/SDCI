@@ -6,13 +6,15 @@ import matplotlib.pyplot as plt
 
 def matrix2vector(npArray):
 	result=[]
-	for (i, j), value in np.ndenumerate(npArray):
-		result.append(value)
+	n, m, v = npArray.shape
+	for i in range(n):
+		for j in range(m):
+			result.append(npArray[i][j])
 	return result
 
 def main():
 	all_landsat_post_bands = glob(
-	"coldspringsfire/landsat_collect/LC080340322016072301T1-SC20180214145802/crop/*band*.tif")
+	'AOI/arroz_band*.tif')#"coldspringsfire/landsat_collect/LC080340322016072301T1-SC20180214145802/crop/*band*.tif")
 	#all_landsat_post_bands=glob(
 	#	"LC080090582019081801RT-SC20190823150055/*band*.tif")
 	all_landsat_post_bands.sort()
@@ -32,7 +34,6 @@ def main():
 	ax[4, 0].imshow(landsat_data[4])
 	ax[5, 0].imshow(landsat_data[5])
 	ax[6, 0].imshow(landsat_data[6])"""
-
 
 	for i in range(7):
 		ax[i].plot(band_vectors[0], band_vectors[i], 'ro')
