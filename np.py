@@ -27,15 +27,8 @@ def main():
 		band_vectors.append(matrix2vector(landsat_data[i]))
 	fig, ax = plt.subplots(1, 7)
 	fig.set_size_inches(30, 30)
-	"""ax[0, 0].imshow(landsat_data[0])
-	ax[1, 0].imshow(landsat_data[1])
-	ax[2, 0].imshow(landsat_data[2])
-	ax[3, 0].imshow(landsat_data[3])
-	ax[4, 0].imshow(landsat_data[4])
-	ax[5, 0].imshow(landsat_data[5])
-	ax[6, 0].imshow(landsat_data[6])"""
 
 	for i in range(7):
-		ax[i].plot(band_vectors[0], band_vectors[i], 'ro')
+		ax[i].plot(band_vectors[5], band_vectors[i], 'ro')
 	plt.show()
 main()
