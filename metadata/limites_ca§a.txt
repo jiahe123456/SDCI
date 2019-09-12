@@ -1,0 +1,7 @@
+181-567 : caña_band1
+243-658 : caña_band2
+531-960 : caña_band3
+339-1081 : caña_band4
+2281-3812 : caña_band5
+1339-2644 : caña_band6
+558-1982 : caña_band7

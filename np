@@ -1,9 +1,0 @@
-import numpy as np
-import PIL
-from PIL import Image
-
-all_landsat_post_bands=glob(
-	"LC080090582019081801RT-SC20190823150055/*band*.tif")
-landsat_data=[]
-for band in  all_landsat_post_bands:
-	

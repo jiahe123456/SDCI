@@ -1,0 +1,7 @@
+27-720 : arroz_band1
+158-830 : arroz_band2
+364-1123 : arroz_band3
+168-1430 : arroz_band4
+696-4060 : arroz_band5
+175-3363 : arroz_band6
+115-2236 : arroz_band7
