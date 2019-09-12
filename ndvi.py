@@ -45,8 +45,8 @@ def main():
 		#band_vectors.append(matrix2vector(landsat_data[i], arroz_bottom_limits[i], arroz_top_limits[i]))
 
 	NIR=matrix3D2matrix2D(landsat_data[3], cana_bottom_limits[3], cana_top_limits[3])
-	NCR=matrix3D2matrix2D(landsat_data[0], cana_bottom_limits[0], cana_bottom_limits[0])
-	naip_ndvi = es.normalized_diff(NIR, NCR)
+	VIS=matrix3D2matrix2D(landsat_data[0], cana_bottom_limits[0], cana_bottom_limits[0])
+	naip_ndvi = es.normalized_diff(NIR, VIS)
 	ep.plot_bands(naip_ndvi, cmap="PiYG", scale=False, vmin=-1, vmax=1)
 	plt.show()
 main()
