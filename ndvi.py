@@ -1,5 +1,7 @@
+import earthpy.spatial as es
 import numpy as np
 import PIL
+import earthpy.plot as ep
 from glob import glob
 from PIL import Image
 import matplotlib.pyplot as plt
@@ -25,10 +27,6 @@ def main():
 	landsat_img=[]
 	landsat_data=[]
 	band_vectors=[]
-	cana_bottom_limits=[181, 243, 531, 339, 2281, 1339, 558]
-	cana_top_limits=[567, 658, 960, 1081, 3812, 2644, 1982]
-	arroz_bottom_limits=[27, 158, 354, 168, 696, 175, 115]
-	arroz_top_limits=[720, 830, 1123, 1430, 4060, 3363, 2236]
 	for i in  range(len(all_landsat_post_bands)):
 		landsat_img.append(Image.open(all_landsat_post_bands[i]))
 		landsat_data.append(np.array(landsat_img[i]))
@@ -37,7 +35,7 @@ def main():
 	fig, ax = plt.subplots(1, 7)
 	fig.set_size_inches(30, 30)
 
-	for i in range(7):
-		ax[i].plot(band_vectors[6], band_vectors[i], 'ro')
+	naip_ndvi = es.normalized_diff(landsat_data[3], landsat_data[0])
+	ep.plot_bands(naip_ndvi, cmap="PiYG", scale=False, vmin=-1, vmax=1)
 	plt.show()
 main()
