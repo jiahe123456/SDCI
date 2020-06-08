@@ -1,0 +1,13 @@
+*Primero hay que dividir las imagenes Pansharp y MS usando el script split_image.m
+*Despues se aplica pansharp usando panshar.m y el DevTools Pansharp de Gemine
+Vivone
+*Despues de esto se procede a obtener los archivos nc de cada imagen
+*A continuacion se obtiene el archivo excel de los cultivos presentes en la zona
+*Se utiliza el archivo alternative_search_data.m para obtener 
+la primera parte de la información de los pixeles
+*Se usa un archivo intermedio para convertir allOK a lonLat
+*Se hace merge de los pixeles con merge.m
+*Se obtienen las firmas espectrales con get_ms_info.m
+*Se quitan valores nulos con no_zeros
+*Se utilizan los scripts para la impresión de resultados bands y mosaico
+

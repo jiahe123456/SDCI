@@ -1,0 +1,80 @@
+
+--------------------------------------------------------------------------------
+              Assertion detected at jue ene 23 12:30:49 2020 -0500
+--------------------------------------------------------------------------------
+
+Configuration:
+  Crash Decoding           : Disabled - No sandbox or build area path
+  Crash Mode               : continue (default)
+  Default Encoding         : UTF-8
+  Deployed                 : false
+  Desktop Environment      : Deepin
+  GNU C Library            : 2.27 stable
+  Graphics Driver          : Intel Open Source Technology Center Mesa DRI Intel(R) UHD Graphics 600 (Geminilake 2x6)  Version 3.0 Mesa 19.0.8
+  Java Version             : Java 1.8.0_152-b16 with Oracle Corporation Java HotSpot(TM) 64-Bit Server VM mixed mode
+  MATLAB Architecture      : glnxa64
+  MATLAB Entitlement ID    : 6257193
+  MATLAB Root              : /usr/local/MATLAB/R2018b
+  MATLAB Version           : 9.5.0.944444 (R2018b)
+  OpenGL                   : hardware
+  Operating System         : Ubuntu 18.04.3 LTS
+  Process ID               : 4673
+  Processor ID             : x86 Family 6 Model 122 Stepping 1, GenuineIntel
+  Session Key              : 76c17f5b-0077-46cb-adc3-f4e47a0a7d44
+  Static TLS mitigation    : Enabled: Full
+  Window System            : The X.Org Foundation (12004000), display :0
+
+Fault Count: 1
+
+
+Additional Log Files:
+  Java Crash Report        : /home/ruben4181/hs_error_pid4673.log
+  Java Log                 : /home/ruben4181/java.log.4673
+
+
+Assertion in void {anonymous}::mwJavaAbort() at javainit.cpp line 1366
+
+Register State (captured):
+  RAX = 00007f09553c1c00  RBX = 00007f097e59d1f8
+  RCX = 000000000000000a  RDX = 00007f097e580bf8
+  RSP = 00007f08ed438160  RBP = 00007f08ed438520
+  RSI = 00007f097e3455a5  RDI = 00007f08ed438170
+
+   R8 = 00007f08ed438434   R9 = 00007f08ed438434
+  R10 = 616a2e74696b6c6f  R11 = 00293233353a6176
+  R12 = 00007f08ed438540  R13 = 00007f08ed4389c0
+  R14 = 00007f09553c0665  R15 = 00007f09553c1c00
+
+  RIP = 00007f097e2a849e  EFL = 0000000000000000
+
+   CS = 5878   FS = 7e1f   GS = 7f09
+
+Stack Trace (captured):
+[  0] 0x00007f097e2a02d3                             bin/glnxa64/libmwfl.so+00762579
+[  1] 0x00007f097e2a04cc                             bin/glnxa64/libmwfl.so+00763084 _ZN10foundation4core4diag15stacktrace_base7captureEm+00000028
+[  2] 0x00007f097e2a27ed                             bin/glnxa64/libmwfl.so+00772077
+[  3] 0x00007f097e2a454b                             bin/glnxa64/libmwfl.so+00779595
+[  4] 0x00007f097e2a45e2                             bin/glnxa64/libmwfl.so+00779746
+[  5] 0x00007f095537688b                            bin/glnxa64/libmwjmi.so+01038475
+[  6] 0x00007f094e827ecb /usr/local/MATLAB/R2018b/sys/java/jre/glnxa64/jre/lib/amd64/server/libjvm.so+09617099
+[  7] 0x00007f094e5e9c26 /usr/local/MATLAB/R2018b/sys/java/jre/glnxa64/jre/lib/amd64/server/libjvm.so+07265318
+[  8] 0x00007f08a65dac92 /usr/local/MATLAB/R2018b/bin/glnxa64/libnativewindow_x11.so+00011410 NativewindowCommon_FatalError+00000268
+[  9] 0x00007f08a65db9d2 /usr/local/MATLAB/R2018b/bin/glnxa64/libnativewindow_x11.so+00014802
+[ 10] 0x00007f09714e799e              /usr/lib/x86_64-linux-gnu/libX11.so.6+00264606 _XIOError+00000078
+[ 11] 0x00007f09714e522d              /usr/lib/x86_64-linux-gnu/libX11.so.6+00254509 _XEventsQueued+00000125
+[ 12] 0x00007f09714d6cc0              /usr/lib/x86_64-linux-gnu/libX11.so.6+00195776 XEventsQueued+00000080
+[ 13] 0x00007f092983f176                                   <unknown-module>+00000000
+[ 14] 0x00007f092c56f254                                   <unknown-module>+00000000
+[ 15] 0x00007f0929008302                                   <unknown-module>+00000000
+[ 16] 0x00007f09290007a7                                   <unknown-module>+00000000
+[ 17] 0x00007f094e591e06 /usr/local/MATLAB/R2018b/sys/java/jre/glnxa64/jre/lib/amd64/server/libjvm.so+06905350
+[ 18] 0x00007f094e592311 /usr/local/MATLAB/R2018b/sys/java/jre/glnxa64/jre/lib/amd64/server/libjvm.so+06906641
+[ 19] 0x00007f094e5927b7 /usr/local/MATLAB/R2018b/sys/java/jre/glnxa64/jre/lib/amd64/server/libjvm.so+06907831
+[ 20] 0x00007f094e62df10 /usr/local/MATLAB/R2018b/sys/java/jre/glnxa64/jre/lib/amd64/server/libjvm.so+07544592
+[ 21] 0x00007f094e979a43 /usr/local/MATLAB/R2018b/sys/java/jre/glnxa64/jre/lib/amd64/server/libjvm.so+11000387
+[ 22] 0x00007f094e979b8c /usr/local/MATLAB/R2018b/sys/java/jre/glnxa64/jre/lib/amd64/server/libjvm.so+11000716
+[ 23] 0x00007f094e8298d8 /usr/local/MATLAB/R2018b/sys/java/jre/glnxa64/jre/lib/amd64/server/libjvm.so+09623768
+[ 24] 0x00007f097f10b6db              /lib/x86_64-linux-gnu/libpthread.so.0+00030427
+[ 25] 0x00007f0980a8988f                    /lib/x86_64-linux-gnu/libc.so.6+01185935 clone+00000063
+[ 26] 0x0000000000000000                                   <unknown-module>+00000000
+

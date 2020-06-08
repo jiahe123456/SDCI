@@ -1,0 +1,8 @@
+First Step is to get the images of the areas of interest. Preferably images with the less
+cloud covering as possible.
+
+The next step is to apply the pansharpening procces to the images to get the full resolution needed
+in the project
+
+Then or parallel at the last step get the nfc files from the images using sentinel tools software
+to get the coordinates of all of the pixels in the panchromatic image

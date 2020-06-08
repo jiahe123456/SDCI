@@ -1,0 +1,18 @@
+readtiff_['pan' or 'ms']_procedure // To read the tiff files. If is ms prcedure,
+				      numbers of bands are also required
+split_procedure                    // To split the images into sub_images for pre-proccess
+				      1024 for MS Images and 2048 for PAN Images
+pansharpening_procedure            // To get high resolution multispectral images
+
+search_data_procedure              // to find de regions where a coca crop can allocate
+
+conver_allok_procedure             // pre-process the output of the last script to perfom
+			              the nexts scripts
+*merge_pixels_procedure             // convert a region into a only pixel for each single
+				      exit from search_data_procedure
+*get_ms_info_procedure              // extract the information of the crops direct from
+				      the splited pansharped image
+*non_zeros_procedure                // To eliminate the crops that were out of 
+				      the image
+
+(*) Indicates that the script has some variation to add geological metadata to the information obtained on the before images

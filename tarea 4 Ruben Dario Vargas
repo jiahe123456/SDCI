@@ -1,0 +1,26 @@
+Rubén Darío Vargas
+
+1) El modelo se corrió en ProB y Model Checking sin ningún inconveniente, entregando correctamente los resultados.
+
+2) * La guarda @grd0 nos indica que al finalizar el programa, los elementos del arreglo ordenado son una
+permutación de los elementos del arreglo inicialmente dadó como entrada al programa.
+ * La segunda @grd1 dice que al terminarse el programa, los elementos van a estar ordenados de forma
+ascendente, desde el primer elemento hasta el ultimo
+
+3) Análisis de las invariantes del programa
+* @inv0 e @inv1, los iteradores son de tipo natural y estan comprendidos en el intervalo de elementos del arreglo
+* @inv2 En todo momento los elementos del arreglo de respuesta son una permutación de los elementos del arreglo de origen.
+* @inv3 Los elementos desde la ultima posición, hasta donde vayan los iteradores estan ordenados. Esta es la invariante del ciclo, la principal.
+* @inv4 Los elementos que restan por ordenar son mayores o iguales a los elementos que ya estan ordenados.
+
+Proceso del programa, dado un arreglo desordenado de elementos, lo que se quiere es enviar los elementos
+más grandes al final de dicho arreglo. Para lograrlo el programa toma, en un principio los dos pares finales de
+elementos y observa si el que esta a la izquierda del otro es mayor que el de la derecha, de ser cierto entonces
+toma ese valor de la izquierda y lo intercambia con el de la derecha. Si ese valor es menor, entonces continua.
+
+Cuando va en medio del arreglo y encuentra un valor que debe cambiar, va comparando con todos los elementos a su derecha, hasta que encuentre un elemento a su derecha que sea igual o mayor, para asi garantizar que quedó en el lugar correcto.
+
+4) Con esos invariantes es suficiente.
+
+5) Si, puesto que si el programa tuvo que reordernar los elementos, no va a llegar a n hasta que esté en el inicio del arreglo, y si llega hasta el numero de elementos totaltes del arreglo sin devolverse, es porque ya todos estan ordenados de menor a mayor.
+
